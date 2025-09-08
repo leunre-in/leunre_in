@@ -51,9 +51,13 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    // Activate SimpleLightbox plugin for portfolio items
+    // // Activate SimpleLightbox plugin for portfolio items
+    // new SimpleLightbox({
+    //     elements: '#portfolio a.portfolio-box'
+    // });
+
     new SimpleLightbox({
-        elements: '#portfolio a.portfolio-box'
-    });
+    elements: '#portfolio a.portfolio-box:not(.no-lightbox)'  // Add class 'no-lightbox' to links you don't want to use the lightbox
+});
 
 });
